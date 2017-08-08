@@ -5,6 +5,17 @@ import sys
 import newspaper
 import time
 
+
+def progress(count, total, status=''):
+    bar_len = 60
+    filled_len = int(round(bar_len * count / float(total)))
+
+    percents = round(100.0 * count / float(total), 1)
+    bar = '=' * filled_len + '-' * (bar_len - filled_len)
+
+    sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
+    sys.stdout.flush()
+
 sys.setrecursionlimit(10000)
 def cnn_article():
 	start_time = time.time()
@@ -16,7 +27,7 @@ def cnn_article():
 		article.parse()
 		article_list.append(article.text)
 		ctr += 1
-		print ctr
+		progress(ctr, 839)
 	with open('cnn_articles.pkl', 'wb') as f:
 		pickle.dump(article_list, f)
 
@@ -26,6 +37,7 @@ def cnn_article():
 	print len(newlist)
 	elapsed_time = time.time() - start_time
 	print elapsed_time, "seconds elapsed"
+
 
 cnn_article()
 
