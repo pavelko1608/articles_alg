@@ -61,5 +61,27 @@ def fox_article():
 	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"
 
-cnn_article()
-fox_article()
+def vox_article():
+	start_time = time.time()
+	article_list = []
+	vox_paper = newspaper.build("https://www.vox.com/", memoize_articles=False)
+	ctr = 0
+	for article in vox_paper.articles:
+		article.download()
+		article.parse()
+		article_list.append(article.text)
+		ctr += 1
+		progress(ctr, len(vox_paper.articles), status = "Fetching VOX")
+	with open('vox_articles.pkl', 'wb') as f:
+		pickle.dump(article_list, f)
+
+	with open('vox_articles.pkl', 'rb') as f:
+		newlist = pickle.load(f)
+	print("vox len:")
+	print len(newlist)
+	elapsed_time = (time.time() - start_time) / 60
+	print elapsed_time, "minutes elapsed"
+
+# cnn_article()
+# fox_article()
+vox_article()
