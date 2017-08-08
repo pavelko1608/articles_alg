@@ -30,9 +30,21 @@ observer_data = []
 with open('observer_articles.pkl', 'rb') as f:
 		observer = pickle.load(f)
 for article in observer:
-	observer_data.append([1, article])	
+	observer_data.append([1, article])
 
-right_wing_data = fox_data + observer_data
+breitbart_data = []
+with open('breitbart_articles.pkl', 'rb') as f:
+		breitbart = pickle.load(f)
+for article in breitbart:
+	breitbart_data.append([1, article])	
+
+newsmax_data = []
+with open('newsmax_articles.pkl', 'rb') as f:
+		newsmax = pickle.load(f)
+for article in newsmax:
+	newsmax_data.append([1, article])				
+
+right_wing_data = fox_data + observer_data + breitbart_data + newsmax_data
 
 data = left_wing_data + right_wing_data
 labels, articles = targetFeatureSplit(data)
@@ -63,9 +75,9 @@ print "precision_score:", metrics.precision_score(labels_test, pred)
 print "accuracy_score:", metrics.accuracy_score(labels_test, pred, normalize = False)
 
 #     BEST SCORES
-# Number of samples: 892
-# f1_score: 0.79676463887
-# recall_score: 0.739015162372
-# precision_score: 0.957142857143
-# accuracy_score: 817
+# Number of samples: 1008
+# f1_score: 0.771146860405
+# recall_score: 0.730722955145
+# precision_score: 0.936507936508
+# accuracy_score: 868
 

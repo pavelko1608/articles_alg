@@ -103,9 +103,55 @@ def observer_article():
 	print("observer len:")
 	print len(newlist)
 	elapsed_time = (time.time() - start_time) / 60
+	print elapsed_time, "minutes elapsed"
+
+# 152 articles
+def breitbart_article():
+	start_time = time.time()
+	article_list = []
+	breitbart_paper = newspaper.build("http://www.breitbart.com/", memoize_articles=False)
+	ctr = 0
+	for article in breitbart_paper.articles:
+		article.download()
+		article.parse()
+		article_list.append(article.text)
+		ctr += 1
+		progress(ctr, len(breitbart_paper.articles), status = "Fetching the Breitbart news")
+	with open('breitbart_articles.pkl', 'wb') as f:
+		pickle.dump(article_list, f)
+
+	with open('breitbart_articles.pkl', 'rb') as f:
+		newlist = pickle.load(f)
+	print("breitbart len:")
+	print len(newlist)
+	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"	
+
+#236 articles
+def newsmax_article():
+	start_time = time.time()
+	article_list = []
+	newsmax_paper = newspaper.build("http://www.newsmax.com/", memoize_articles=False)
+	ctr = 0
+	for article in newsmax_paper.articles:
+		article.download()
+		article.parse()
+		article_list.append(article.text)
+		ctr += 1
+		progress(ctr, len(newsmax_paper.articles), status = "Fetching the NewsMax news")
+	with open('newsmax_articles.pkl', 'wb') as f:
+		pickle.dump(article_list, f)
+
+	with open('newsmax_articles.pkl', 'rb') as f:
+		newlist = pickle.load(f)
+	print("newsmax len:")
+	print len(newlist)
+	elapsed_time = (time.time() - start_time) / 60
+	print elapsed_time, "minutes elapsed"						
 
 # cnn_article()
 # fox_article()
 # vox_article()
-observer_article()
+# observer_article()
+#breitbart_article()
+newsmax_article()
