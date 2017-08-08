@@ -6,8 +6,6 @@ from nltk.stem.snowball import SnowballStemmer
 from feature_format import featureFormat, targetFeatureSplit
 from sklearn.model_selection import train_test_split
 
-# stemmer = SnowballStemmer("english", ignore_stopwords=True)
-
 cnn_data = []
 with open('cnn_articles.pkl', 'rb') as f:
 		cnn = pickle.load(f)
@@ -25,29 +23,6 @@ data = cnn_data + fox_data
 labels, articles = targetFeatureSplit(data)
 articles_train, articles_test, labels_train, labels_test = train_test_split(articles, labels, test_size = 0.3, random_state = 42)
 
-# for article in articles_train:
-# 	article = article[0].split()
-# 	for word in article:
-# 		word = stemmer.stem(word)
-# 		word = word.replace('"', '')
-# 		word = word.replace('.', '')
-# 		word = word.replace(',', '')
-# 		word = word.replace('!', '')
-# 		word = word.replace('?', '')
-# 		word = word.replace("'", '')
-# 	' '.join(article)
-
-# for article in articles_test:
-# 	article = article[0].split()
-# 	for word in article:
-# 		word = stemmer.stem(word)
-# 		word = word.replace('"', '')
-# 		word = word.replace('.', '')
-# 		word = word.replace(',', '')
-# 		word = word.replace('!', '')
-# 		word = word.replace('?', '')
-# 		word = word.replace("'", '')
-# 	' '.join(article)
 flat_train = []
 flat_test = []
 for sublist in articles_train:
@@ -65,10 +40,11 @@ clf = MultinomialNB(alpha=.01)
 clf.fit(vectors, labels_train)
 pred = clf.predict(vectors_test)
 
+print "Number of samples:", len(flat_test)
 print "f1_score:", metrics.f1_score(labels_test, pred, average='macro')
 print "recall_score:", metrics.recall_score(labels_test, pred, average='macro')
-print "precision_score:", metrics.precision_score(labels_test, pred, average='macro')
-print "accuracy_score:", metrics.accuracy_score(labels_test, pred)
+print "precision_score:", metrics.precision_score(labels_test, pred)
+print "accuracy_score:", metrics.accuracy_score(labels_test, pred, normalize = False)
 
 
 
