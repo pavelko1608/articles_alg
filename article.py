@@ -61,5 +61,5 @@ def fox_article():
 	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"
 
-# cnn_article()
+cnn_article()
 fox_article()

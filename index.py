@@ -25,7 +25,16 @@ data = cnn_data + fox_data
 labels, articles = targetFeatureSplit(data)
 articles_train, articles_test, labels_train, labels_test = train_test_split(articles, labels, test_size = 0.3, random_state = 42)
 
-
+vectorizer = TfidfVectorizer(tokenizer=lambda doc: doc, lowercase=False)
+vectors = vectorizer.fit_transform(articles_train)
+vectors_test = vectorizer.transform(articles_test)
+clf = MultinomialNB(alpha=.01)
+clf.fit(vectors, labels_train)
+pred = clf.predict(vectors_test)
+print "f1_score:", metrics.f1_score(labels_test, pred, average='macro')
+print "recall_score:", metrics.recall_score(labels_test, pred, average='macro')
+print "precision_score:", metrics.precision_score(labels_test, pred, average='macro')
+print "accuracy_score:", metrics.accuracy_score(labels_test, pred)
 
 
 
