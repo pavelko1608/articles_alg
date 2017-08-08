@@ -46,5 +46,10 @@ print "recall_score:", metrics.recall_score(labels_test, pred, average='macro')
 print "precision_score:", metrics.precision_score(labels_test, pred)
 print "accuracy_score:", metrics.accuracy_score(labels_test, pred, normalize = False)
 
-
+#     BEST SCORES
+# Number of samples: 368
+# f1_score: 0.825192282425
+# recall_score: 0.793233618234
+# precision_score: 0.942028985507
+# accuracy_score: 321
 

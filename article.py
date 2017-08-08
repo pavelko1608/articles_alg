@@ -28,7 +28,7 @@ def cnn_article():
 		article.parse()
 		article_list.append(article.text)
 		ctr += 1
-		progress(ctr, 839, status = "Fetching CNN")
+		progress(ctr, len(cnn_paper.articles), status = "Fetching CNN")
 	with open('cnn_articles.pkl', 'wb') as f:
 		pickle.dump(article_list, f)
 
@@ -50,7 +50,7 @@ def fox_article():
 		article.parse()
 		article_list.append(article.text)
 		ctr += 1
-		progress(ctr, 371, status = "Fetching Fox news")
+		progress(ctr, len(fox_paper.articles), status = "Fetching Fox news")
 	with open('fox_articles.pkl', 'wb') as f:
 		pickle.dump(article_list, f)
 
