@@ -147,11 +147,57 @@ def newsmax_article():
 	print("newsmax len:")
 	print len(newlist)
 	elapsed_time = (time.time() - start_time) / 60
-	print elapsed_time, "minutes elapsed"						
+	print elapsed_time, "minutes elapsed"
+
+#193 articles
+def politico_article():
+	start_time = time.time()
+	article_list = []
+	politico_paper = newspaper.build("http://www.politico.com/", memoize_articles=False)
+	ctr = 0
+	for article in politico_paper.articles:
+		article.download()
+		article.parse()
+		article_list.append(article.text)
+		ctr += 1
+		progress(ctr, len(politico_paper.articles), status = "Fetching the Politico news")
+	with open('politico_articles.pkl', 'wb') as f:
+		pickle.dump(article_list, f)
+
+	with open('politico_articles.pkl', 'rb') as f:
+		newlist = pickle.load(f)
+	print("politico len:")
+	print len(newlist)
+	elapsed_time = (time.time() - start_time) / 60
+	print elapsed_time, "minutes elapsed"	
+		
+#193 articles
+def washington_post_article():
+	start_time = time.time()
+	article_list = []
+	washington_post_paper = newspaper.build("http://www.politico.com/", memoize_articles=False)
+	ctr = 0
+	for article in washington_post_paper.articles:
+		article.download()
+		article.parse()
+		article_list.append(article.text)
+		ctr += 1
+		progress(ctr, len(washington_post_paper.articles), status = "Fetching the Washington Post news")
+	with open('washington_post_articles.pkl', 'wb') as f:
+		pickle.dump(article_list, f)
+
+	with open('washington_post_articles.pkl', 'rb') as f:
+		newlist = pickle.load(f)
+	print("washington_post len:")
+	print len(newlist)
+	elapsed_time = (time.time() - start_time) / 60
+	print elapsed_time, "minutes elapsed"										
 
 # cnn_article()
 # fox_article()
 # vox_article()
 # observer_article()
 #breitbart_article()
-newsmax_article()
+#newsmax_article()
+politico_article()
+washington_post_article()

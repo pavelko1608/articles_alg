@@ -18,7 +18,19 @@ with open('vox_articles.pkl', 'rb') as f:
 for article in vox:
 	vox_data.append([0, article])
 
-left_wing_data = cnn_data + vox_data
+politico_data = []
+with open('politico_articles.pkl', 'rb') as f:
+		politico = pickle.load(f)
+for article in politico:
+	politico_data.append([0, article])
+
+washington_post_data = []
+with open('washington_post_articles.pkl', 'rb') as f:
+		washington_post = pickle.load(f)
+for article in washington_post:
+	washington_post_data.append([0, article])		
+
+left_wing_data = cnn_data + vox_data + politico_data + washington_post_data
 
 fox_data = []
 with open('fox_articles.pkl', 'rb') as f:
@@ -69,15 +81,19 @@ clf.fit(vectors, labels_train)
 pred = clf.predict(vectors_test)
 
 print "Number of samples:", len(flat_test)
-print "f1_score:", metrics.f1_score(labels_test, pred, average='macro')
-print "recall_score:", metrics.recall_score(labels_test, pred, average='macro')
+print "f1_score:", metrics.f1_score(labels_test, pred, average='micro')
+print "recall_score:", metrics.recall_score(labels_test, pred, average='micro')
 print "precision_score:", metrics.precision_score(labels_test, pred)
-print "accuracy_score:", metrics.accuracy_score(labels_test, pred, normalize = False)
+print "assessed correctly:", metrics.accuracy_score(labels_test, pred, normalize = False)
+print "assessed incorrectly:", len(flat_test) - metrics.accuracy_score(labels_test, pred, normalize = False)
+print "accuracy:", metrics.accuracy_score(labels_test, pred)
 
 #     BEST SCORES
-# Number of samples: 1008
-# f1_score: 0.771146860405
-# recall_score: 0.730722955145
-# precision_score: 0.936507936508
-# accuracy_score: 868
+# Number of samples: 1124
+# f1_score: 0.870996441281
+# recall_score: 0.870996441281
+# precision_score: 0.931034482759
+# assessed correctly: 979
+# assessed incorrectly: 145
+# accuracy: 0.870996441281
 
