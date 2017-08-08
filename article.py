@@ -17,6 +17,7 @@ def progress(count, total, status=''):
     sys.stdout.flush()
 
 sys.setrecursionlimit(10000)
+#841 articles
 def cnn_article():
 	start_time = time.time()
 	article_list = []
@@ -38,7 +39,7 @@ def cnn_article():
 	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"
 
-
+#377 articles
 def fox_article():
 	start_time = time.time()
 	article_list = []
@@ -60,6 +61,5 @@ def fox_article():
 	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"
 
-fox_article()
 cnn_article()
-
+fox_article()
