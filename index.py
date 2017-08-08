@@ -12,6 +12,13 @@ with open('cnn_articles.pkl', 'rb') as f:
 for article in cnn:
 	cnn_data.append([0, article])
 
+vox_data = []
+with open('vox_articles.pkl', 'rb') as f:
+		vox = pickle.load(f)
+for article in vox:
+	vox_data.append([0, article])
+
+left_wing_data = cnn_data + vox_data
 
 fox_data = []
 with open('fox_articles.pkl', 'rb') as f:
@@ -19,12 +26,21 @@ with open('fox_articles.pkl', 'rb') as f:
 for article in fox:
 	fox_data.append([1, article])
 
-data = cnn_data + fox_data
+observer_data = []
+with open('observer_articles.pkl', 'rb') as f:
+		observer = pickle.load(f)
+for article in observer:
+	observer_data.append([1, article])	
+
+right_wing_data = fox_data + observer_data
+
+data = left_wing_data + right_wing_data
 labels, articles = targetFeatureSplit(data)
 articles_train, articles_test, labels_train, labels_test = train_test_split(articles, labels, test_size = 0.3, random_state = 42)
 
 flat_train = []
 flat_test = []
+
 for sublist in articles_train:
     for article in sublist:
         flat_train.append(article)
@@ -47,9 +63,9 @@ print "precision_score:", metrics.precision_score(labels_test, pred)
 print "accuracy_score:", metrics.accuracy_score(labels_test, pred, normalize = False)
 
 #     BEST SCORES
-# Number of samples: 368
-# f1_score: 0.828246753247
-# recall_score: 0.795156695157
-# precision_score: 0.955882352941
-# accuracy_score: 322
+# Number of samples: 892
+# f1_score: 0.79676463887
+# recall_score: 0.739015162372
+# precision_score: 0.957142857143
+# accuracy_score: 817
 
