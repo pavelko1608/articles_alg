@@ -4,7 +4,8 @@ from sklearn import metrics
 import pickle
 from nltk.stem.snowball import SnowballStemmer
 from feature_format import featureFormat, targetFeatureSplit
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split 
+import time
 
 cnn_data = []
 with open('cnn_articles.pkl', 'rb') as f:
@@ -72,11 +73,21 @@ for sublist in articles_test:
     for article in sublist:
         flat_test.append(article)  
 
-vectorizer = TfidfVectorizer()
+vectorizer = TfidfVectorizer(strip_accents = "unicode", lowercase = False)
 vectors = vectorizer.fit_transform(flat_train)
 vectors_test = vectorizer.transform(flat_test)
 
-clf = MultinomialNB(alpha=.01)
+# clf = MultinomialNB(alpha=.01, fit_prior = False)
+# clf.fit(vectors, labels_train)
+# pred = clf.predict(vectors_test)
+
+# from sklearn import tree
+# clf = tree.DecisionTreeClassifier(min_samples_split = 1)
+# clf = clf.fit(vectors, labels_train)
+# pred = clf.predict(vectors_test)
+t0 = time.time()
+from sklearn.neural_network import MLPClassifier
+clf = MLPClassifier(alpha = .001)
 clf.fit(vectors, labels_train)
 pred = clf.predict(vectors_test)
 
@@ -87,13 +98,13 @@ print "precision_score:", metrics.precision_score(labels_test, pred)
 print "assessed correctly:", metrics.accuracy_score(labels_test, pred, normalize = False)
 print "assessed incorrectly:", len(flat_test) - metrics.accuracy_score(labels_test, pred, normalize = False)
 print "accuracy:", metrics.accuracy_score(labels_test, pred)
-
+print (time.time() - t0) / 60, "mins elapsed"
 #     BEST SCORES
 # Number of samples: 1205
-# f1_score: 0.863900414938
-# recall_score: 0.863900414938
-# precision_score: 0.909638554217
-# assessed correctly: 1041
-# assessed incorrectly: 164
-# accuracy: 0.863900414938
-
+# f1_score: 0.909543568465
+# recall_score: 0.909543568465
+# precision_score: 0.944186046512
+# assessed correctly: 1096
+# assessed incorrectly: 109
+# accuracy: 0.909543568465
+# 5.60581320127 mins elapsed
