@@ -17,7 +17,7 @@ def progress(count, total, status=''):
     sys.stdout.flush()
 
 sys.setrecursionlimit(10000)
-#841 articles
+#852 articles
 def cnn_article():
 	start_time = time.time()
 	article_list = []
@@ -39,7 +39,7 @@ def cnn_article():
 	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"
 
-#383 articles
+#395 articles
 def fox_article():
 	start_time = time.time()
 	article_list = []
@@ -61,7 +61,7 @@ def fox_article():
 	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"
 
-#1666 articles
+#1673 articles
 def vox_article():
 	start_time = time.time()
 	article_list = []
@@ -83,7 +83,7 @@ def vox_article():
 	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"
 
-#81 article
+#87 article
 def observer_article():
 	start_time = time.time()
 	article_list = []
@@ -105,7 +105,7 @@ def observer_article():
 	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"
 
-# 152 articles
+# 210 articles
 def breitbart_article():
 	start_time = time.time()
 	article_list = []
@@ -127,7 +127,7 @@ def breitbart_article():
 	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"	
 
-#236 articles
+#381 articles
 def newsmax_article():
 	start_time = time.time()
 	article_list = []
@@ -149,7 +149,7 @@ def newsmax_article():
 	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"
 
-#193 articles
+#209 articles
 def politico_article():
 	start_time = time.time()
 	article_list = []
@@ -170,8 +170,8 @@ def politico_article():
 	print len(newlist)
 	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"	
-		
-#193 articles
+
+#207 articles
 def washington_post_article():
 	start_time = time.time()
 	article_list = []
@@ -193,11 +193,11 @@ def washington_post_article():
 	elapsed_time = (time.time() - start_time) / 60
 	print elapsed_time, "minutes elapsed"										
 
-# cnn_article()
-# fox_article()
-# vox_article()
-# observer_article()
-#breitbart_article()
-#newsmax_article()
+cnn_article()
+fox_article()
+vox_article()
+observer_article()
+breitbart_article()
+newsmax_article()
 politico_article()
 washington_post_article()

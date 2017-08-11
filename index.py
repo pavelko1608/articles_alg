@@ -89,11 +89,11 @@ print "assessed incorrectly:", len(flat_test) - metrics.accuracy_score(labels_te
 print "accuracy:", metrics.accuracy_score(labels_test, pred)
 
 #     BEST SCORES
-# Number of samples: 1124
-# f1_score: 0.870996441281
-# recall_score: 0.870996441281
-# precision_score: 0.931034482759
-# assessed correctly: 979
-# assessed incorrectly: 145
-# accuracy: 0.870996441281
+# Number of samples: 1205
+# f1_score: 0.863900414938
+# recall_score: 0.863900414938
+# precision_score: 0.909638554217
+# assessed correctly: 1041
+# assessed incorrectly: 164
+# accuracy: 0.863900414938
 
