@@ -100,11 +100,11 @@ print "assessed incorrectly:", len(flat_test) - metrics.accuracy_score(labels_te
 print "accuracy:", metrics.accuracy_score(labels_test, pred)
 print (time.time() - t0) / 60, "mins elapsed"
 #     BEST SCORES
-# Number of samples: 1205
-# f1_score: 0.909543568465
-# recall_score: 0.909543568465
-# precision_score: 0.944186046512
-# assessed correctly: 1096
-# assessed incorrectly: 109
-# accuracy: 0.909543568465
-# 5.60581320127 mins elapsed
+# Number of samples: 1306
+# f1_score: 0.914241960184
+# recall_score: 0.914241960184
+# precision_score: 0.896103896104
+# assessed correctly: 1194
+# assessed incorrectly: 112
+# accuracy: 0.914241960184
+# 6.14256568352 mins elapsed
