@@ -112,49 +112,37 @@ print (time.time() - t0) / 60, "mins elapsed"
 
 
 trump_article = ["""
-	Published August 30, 2017
- 
-NOW PLAYING
-Trump: We will lower taxes for middle-income Americans
-Close
-President Trump called Wednesday for drastically simplifying the tax code, formally kicking off his push for comprehensive tax reform and offering a preview of the hardball politics he'll employ as he tries to muscle it through.  
+	President Trump and his lawyers have discussed whether he could pardon his relatives and aides to undercut, or even end, the special counsel’s investigation into charges that his campaign colluded with Russia to influence the 2016 election, The Washington Post reported on Thursday night.
 
-“I don't want to be disappointed by Congress,” Trump said in Springfield, Mo. “Do you understand me?” 
+There’s no question that with a stroke of his pen, Mr. Trump can shield his son Donald Trump Jr., his son-in-law, Jared Kushner, and other close associates from potential prosecution. Despite the uproar that would set off, we know by now that Mr. Trump loves the grand gesture, whatever the consequences. Besides, his family is at stake.
 
-The president wasted little time applying direct pressure to Missouri's Democratic senator, Claire McCaskill, during his visit to her state.  
+While his authority to pardon is crystal clear, a crucial, threatening, legal ambiguity should make him think twice about using this authority.
 
-“We must lower our taxes,” Trump said. “And your senator Claire McCaskill, she must do this for you and if she doesn't do it for you, you have to vote her out of office.”
-Trump rallied supporters as he tries to bring tax reform to the front of the agenda for Congress, as lawmakers return from the August recess next week. He called this a “once-in-a-generation opportunity to deliver real tax reform for everyday hard-working Americans.”
+The Constitution gives the president “power to grant reprieves and pardons for offenses against the United States, except in cases of impeachment.” The framers had sound reasons for bestowing that authority. As Alexander Hamilton explained, criminal law in the late 18th century was so severe that without the pardon power to soften it, “justice would wear a countenance too sanguinary and cruel.”
 
-The White House has not yet released a detailed tax reform plan. But describing his principles for reform, Trump called for a code that is “simple, fair, and easy to understand.”
+Consistent with the framers’ design, the Supreme Court has interpreted the president’s pardon power broadly. The president can pardon anyone for any crime at any time — even before a suspect has been charged. Congress cannot withdraw presidential pardons, and prosecutors and courts cannot ignore them.
 
-“This enormous complexity is very unfair," the president said. "It disadvantages ordinary Americans who don’t have an army of accountants while benefiting deep-pocketed special interests."
-The president delivered the speech at the Loren Cook Company, a local business that manufactures fans, blowers, vents and laboratory exhaust systems.
+Continue reading the main story
+But could a pardon be a criminal abuse of power? Some would argue that would contradict the founders’ vision of unlimited pardon authority. If a president sold pardons for cash, though, that would violate the federal bribery statute. And if a president can be prosecuted for exchanging pardons for bribes, then it follows that the broad and unreviewable nature of the pardon power does not shield the president from criminal liability for abusing it.
 
-Trump quipped that his proposal to do away with loopholes may not be preferable to wealthy people like him and the owner of the Loren Cook Company, but portrayed it as the right thing to do for workers.
+The Justice Department and the F.B.I. proceeded on this premise in 2001 when they opened an investigation into possible bribery charges arising out of President Bill Clinton’s pardon of the fugitive financier Marc Rich, whose former wife had donated $450,000 to Clinton’s presidential library. The investigation lasted until 2005, though no charges resulted.
+Of course, bribery would not be the relevant crime. No one thinks that Donald Jr. or Jared Kushner — or anyone else involved in the Russia scandal — would pay the president for a pardon.
 
-TRUMP LOOKING TO COHN, MNUCHIN TO SELL TAX PLAN
+Yet federal obstruction statutes say that a person commits a crime when he “corruptly” impedes a court or agency proceeding. If it could be shown that President Trump pardoned his family members and close aides to cover up possible crimes, then that could be seen as acting “corruptly” and he could be charged with obstruction of justice. If, as some commentators believe, a sitting president cannot be indicted, Mr. Trump could still face prosecution after he leaves the White House.
 
-“And I’m speaking against myself when I do this, I have to tell you," he said. "And I might be speaking against Mr. Cook. And we’re both OK with it. Is that right? It’s crazy. Maybe we shouldn't be doing this, you know. But we’re doing the right thing.”
-The president also said he’d like to “ideally” bring the corporate tax rate down to 15 percent from 35 percent, saying it would “make us highly competitive.”
+There is strong support for the claim that the obstruction statutes apply to the president.
 
-Campaign politics also hovered over the visit, as displayed by Trump's shot at McCaskill -- an endangered Democrat up for re-election next year.
+In 1974, when the House Judiciary Committee voted to impeach President Richard Nixon, members on both sides of the debate acknowledged that presidential obstruction of justice was not only impeachable but also criminal. A quarter century later, the Senate split 50-50 on whether to remove President Clinton from office on obstruction charges, but senators from both parties agreed that the obstruction laws applied to the president.
 
-By expressing optimism Congress would pass a tax bill, Trump alluded to the Senate’s inability to pass legislation to repeal and replace President Obama’s health care law.
+There is a broad consensus that a president exercises the pardon power properly — not “corruptly” — when he grants clemency based on considerations of mercy or the public welfare. President Gerald Ford invoked both of those values when he pardoned Nixon: He said that a prosecution of the former president would be too divisive and that Nixon had suffered enough. President George H.W. Bush gestured to both values when he pardoned former Reagan administration officials for their involvement in the Iran-contra scandal.
 
-“I think Congress is going to make a comeback,” Trump said. “I hope so. I tell you what, the United States is counting on it.”
+In Trump’s case, the question would be whether he was acting out of the goodness of his heart, or covering up for his family, his associates and himself.
 
-Ahead of the speech, a White House spokesman said Springfield was chosen as the backdrop for Trump’s speech because it is “the birthplace of America’s Main Street, Route 66.”
+We expect — and hope — that prosecutors and courts would give wide latitude to a president in evaluating his pardon decisions. Only in the most egregious cases should a president face criminal liability for actions taken while in office.
 
-The aide said the purpose of the speech was for the president to speak to the American people about “why tax reform and relief is needed to unrig the system and jumpstart our economy.”
+While the law on this subject is unsettled, that in itself should be unsettling to the president as he considers whether to grant clemency. Not only might the pardons constitute obstruction, but the pardoned individuals might be compelled to testify against Mr. Trump without any recourse to the Fifth Amendment right against self-incrimination, since they would no longer have any concern about incriminating themselves.
 
-Some of the president’s Cabinet members and aides traveled with the president to Springfield on Wednesday, including Treasury Secretary Steven Mnuchin, Commerce Secretary Wilbur Ross, Director of the National Economic Council Gary Cohn and Small Business Administrator Linda McMahon.
-
-A number of Missouri Republicans also attended the speech, including Sen. Roy Blunt, Gov. Eric Greitens, Lt. Gov. Mike Parson and members of the state’s congressional delegation.
-
-Ahead of the president’s speech Wednesday, Democratic Senate leader Chuck Schumer called for Democrats and Republicans working together to “craft a bipartisan package that’s good for the American people.”
-
-“Rather than writing a partisan bill that will benefit the wealthy and special interests, they should commit to working with Democrats, through regular order, to craft a bill in the light of day that puts the middle class and those struggling to make it first,” Schumer said in a Wednesday call with reporters.
+He could ensure that his family members and aides get off scot-free for any crimes they may have committed during the 2016 campaign. But by extricating those individuals from a legal predicament, he might make his own predicament worse.
 """]
 trump_vector = vectorizer.transform(trump_article)
 pred2 = clf.predict(trump_vector)
