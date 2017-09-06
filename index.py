@@ -1,3 +1,4 @@
+# coding: utf-8
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn import metrics
@@ -108,3 +109,57 @@ print (time.time() - t0) / 60, "mins elapsed"
 # assessed incorrectly: 112
 # accuracy: 0.914241960184
 # 6.14256568352 mins elapsed
+
+
+trump_article = ["""
+	Published August 30, 2017
+ 
+NOW PLAYING
+Trump: We will lower taxes for middle-income Americans
+Close
+President Trump called Wednesday for drastically simplifying the tax code, formally kicking off his push for comprehensive tax reform and offering a preview of the hardball politics he'll employ as he tries to muscle it through.  
+
+“I don't want to be disappointed by Congress,” Trump said in Springfield, Mo. “Do you understand me?” 
+
+The president wasted little time applying direct pressure to Missouri's Democratic senator, Claire McCaskill, during his visit to her state.  
+
+“We must lower our taxes,” Trump said. “And your senator Claire McCaskill, she must do this for you and if she doesn't do it for you, you have to vote her out of office.”
+Trump rallied supporters as he tries to bring tax reform to the front of the agenda for Congress, as lawmakers return from the August recess next week. He called this a “once-in-a-generation opportunity to deliver real tax reform for everyday hard-working Americans.”
+
+The White House has not yet released a detailed tax reform plan. But describing his principles for reform, Trump called for a code that is “simple, fair, and easy to understand.”
+
+“This enormous complexity is very unfair," the president said. "It disadvantages ordinary Americans who don’t have an army of accountants while benefiting deep-pocketed special interests."
+The president delivered the speech at the Loren Cook Company, a local business that manufactures fans, blowers, vents and laboratory exhaust systems.
+
+Trump quipped that his proposal to do away with loopholes may not be preferable to wealthy people like him and the owner of the Loren Cook Company, but portrayed it as the right thing to do for workers.
+
+TRUMP LOOKING TO COHN, MNUCHIN TO SELL TAX PLAN
+
+“And I’m speaking against myself when I do this, I have to tell you," he said. "And I might be speaking against Mr. Cook. And we’re both OK with it. Is that right? It’s crazy. Maybe we shouldn't be doing this, you know. But we’re doing the right thing.”
+The president also said he’d like to “ideally” bring the corporate tax rate down to 15 percent from 35 percent, saying it would “make us highly competitive.”
+
+Campaign politics also hovered over the visit, as displayed by Trump's shot at McCaskill -- an endangered Democrat up for re-election next year.
+
+By expressing optimism Congress would pass a tax bill, Trump alluded to the Senate’s inability to pass legislation to repeal and replace President Obama’s health care law.
+
+“I think Congress is going to make a comeback,” Trump said. “I hope so. I tell you what, the United States is counting on it.”
+
+Ahead of the speech, a White House spokesman said Springfield was chosen as the backdrop for Trump’s speech because it is “the birthplace of America’s Main Street, Route 66.”
+
+The aide said the purpose of the speech was for the president to speak to the American people about “why tax reform and relief is needed to unrig the system and jumpstart our economy.”
+
+Some of the president’s Cabinet members and aides traveled with the president to Springfield on Wednesday, including Treasury Secretary Steven Mnuchin, Commerce Secretary Wilbur Ross, Director of the National Economic Council Gary Cohn and Small Business Administrator Linda McMahon.
+
+A number of Missouri Republicans also attended the speech, including Sen. Roy Blunt, Gov. Eric Greitens, Lt. Gov. Mike Parson and members of the state’s congressional delegation.
+
+Ahead of the president’s speech Wednesday, Democratic Senate leader Chuck Schumer called for Democrats and Republicans working together to “craft a bipartisan package that’s good for the American people.”
+
+“Rather than writing a partisan bill that will benefit the wealthy and special interests, they should commit to working with Democrats, through regular order, to craft a bill in the light of day that puts the middle class and those struggling to make it first,” Schumer said in a Wednesday call with reporters.
+"""]
+trump_vector = vectorizer.transform(trump_article)
+pred2 = clf.predict(trump_vector)
+print pred2
+
+
+
+
