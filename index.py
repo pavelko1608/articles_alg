@@ -92,6 +92,9 @@ clf = MLPClassifier(alpha = .001)
 clf.fit(vectors, labels_train)
 pred = clf.predict(vectors_test)
 
+filename = 'finalized_model.sav'
+pickle.dump(clf, open(filename, 'wb'))
+
 print "Number of samples:", len(flat_test)
 print "f1_score:", metrics.f1_score(labels_test, pred, average='micro')
 print "recall_score:", metrics.recall_score(labels_test, pred, average='micro')
@@ -145,8 +148,8 @@ While the law on this subject is unsettled, that in itself should be unsettling 
 He could ensure that his family members and aides get off scot-free for any crimes they may have committed during the 2016 campaign. But by extricating those individuals from a legal predicament, he might make his own predicament worse.
 """]
 trump_vector = vectorizer.transform(trump_article)
-pred2 = clf.predict(trump_vector)
-print pred2
+loaded_model = pickle.load(open(filename, 'rb'))
+print loaded_model.predict(trump_vector)
 
 
 
