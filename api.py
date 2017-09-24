@@ -20,6 +20,5 @@ def send_response():
         return "Left wing"
     if loaded_model.predict(data_vector) == [1]:
         return "Right wing"
-
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')        
+    app.run(debug=True) 

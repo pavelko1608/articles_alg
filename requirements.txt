@@ -1,0 +1,8 @@
+Flask
+sklearn
+goose-extractor
+requests
+newspaper
+pyOpenSSL
+ndg-httpsclient
+pyasn1
