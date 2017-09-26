@@ -6,3 +6,5 @@ newspaper
 pyOpenSSL
 ndg-httpsclient
 pyasn1
+gunicorn
+numpy
